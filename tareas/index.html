@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignación de Tareas del Hogar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>🧹 Asignación de Tareas del Hogar 🏠</h1>
+
+    <form id="tareaForm">
+        
+        <h2>1️⃣ Tipo de tarea</h2>
+        <label for="tarea">✅ ¿Qué tarea necesitas que haga?</label>
+        <textarea id="tarea" rows="2" required></textarea>
+
+        <label for="area">📍 ¿En qué áreas de la casa se debe hacer?</label>
+        <textarea id="area" rows="2" required></textarea>
+
+        <h2>2️⃣ Día y horario</h2>
+        <label for="dia">📅 ¿Qué día quieres que se haga la tarea?</label>
+        <input type="date" id="dia" required>
+
+        <label for="horaInicio">⏰ ¿Desde qué hora se puede empezar?</label>
+        <input type="time" id="horaInicio" required>
+
+        <label for="horaFin">⏳ ¿Hasta qué hora debe estar lista la tarea?</label>
+        <input type="time" id="horaFin" required>
+
+        <h2>3️⃣ Materiales y productos</h2>
+        <label for="productos">🧴 ¿Hay productos específicos que debo usar?</label>
+        <textarea id="productos" rows="2"></textarea>
+
+        <label for="materiales">🗂️ ¿Dónde están los materiales para hacer la tarea?</label>
+        <textarea id="materiales" rows="2"></textarea>
+
+        <h2>4️⃣ Detalles específicos</h2>
+        <label for="detalles">📋 ¿Cómo quieres que se haga la tarea?</label>
+        <textarea id="detalles" rows="3"></textarea>
+
+        <label for="aviso">📢 ¿Debo avisarte cuando termine la tarea?</label>
+        <select id="aviso">
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="foto">📸 ¿Debo tomar una foto cuando termine?</label>
+        <select id="foto">
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <h2>5️⃣ Extras y Confirmación</h2>
+        <label for="extra">➕ ¿Hay otra tarea adicional que quieras agregar?</label>
+        <textarea id="extra" rows="2"></textarea>
+
+        <label for="confirmacion">✅ ¿Confirma que está todo correcto?</label>
+        <select id="confirmacion" required>
+            <option value="Sí">Sí</option>
+            <option value="No">No (Hacer cambios)</option>
+        </select>
+
+        <button type="button" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
